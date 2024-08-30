@@ -7,7 +7,7 @@ export const TextSlide = () => {
     const carousel = document.querySelector('#carouselExampleSlidesOnly');
     if (carousel) {
       new window.bootstrap.Carousel(carousel, {
-        interval: 4000,
+        interval: 3000,
         ride: 'carousel',
       });
     }
