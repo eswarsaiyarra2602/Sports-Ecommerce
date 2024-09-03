@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -10,7 +11,7 @@ function Navbar() {
   return (
     <section id="navbar">
       <nav className="navbar navbar-expand-md">
-        <a className="navbar-brand" href="/">Victory Vault</a>
+        <Link className="navbar-brand" to="/">Victory Vault</Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,23 +31,23 @@ function Navbar() {
               </button>
             </li>
             <li className="nav-item position-relative">
-              <a className="nav-link" href="/wishlist">
+              <Link className="nav-link" to="/wishlist">
                 <i className="fa-solid fa-heart"></i>
                 <span className="badge">5</span> {/* Counter badge */}
                 Wishlist
-              </a>
+              </Link>
             </li>
             <li className="nav-item position-relative">
-              <a className="nav-link" href="/cart">
+              <Link className="nav-link" to="/cart">
                 <i className="fa-solid fa-shopping-cart"></i>
                 <span className="badge">3</span> {/* Counter badge */}
                 Cart
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">
+              <Link className="nav-link" to="/login">
                 <i className="fa-solid fa-user"></i> Login
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
