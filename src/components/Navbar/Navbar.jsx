@@ -2,12 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
-  const handleOrdersClick = () => {
-    // Handle the click event
-    console.log("Orders & Returns button clicked");
-  };
-
+function Navbar({openLoginModal}) {
   return (
     <section id="navbar">
       <nav className="navbar navbar-expand-md">
@@ -25,28 +20,28 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <button className="nav-link" onClick={handleOrdersClick}>
+            <li className="nav-item position-relative">
+              <Link className='nav-link' to="/orders">
                 <i className="fa-solid fa-right-left"></i> Orders & Returns
-              </button>
+              </Link>
             </li>
             <li className="nav-item position-relative">
-              <Link className="nav-link" to="/wishlist">
-                <i className="fa-solid fa-heart"></i>
-                <span className="badge">5</span> {/* Counter badge */}
-                Wishlist
+              <Link className='nav-link' to="/wishlist">
+                  <i className="fa-solid fa-heart"></i>
+                  <span className="badge">5</span> {/* Counter badge */}
+                  Wishlist
               </Link>
             </li>
             <li className="nav-item position-relative">
               <Link className="nav-link" to="/cart">
-                <i className="fa-solid fa-shopping-cart"></i>
-                <span className="badge">3</span> {/* Counter badge */}
-                Cart
+                  <i className="fa-solid fa-shopping-cart"></i>
+                  <span className="badge">3</span> {/* Counter badge */}
+                  Cart
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                <i className="fa-solid fa-user"></i> Login
+              <Link className="nav-link"  to="/login">
+                  <i className="fa-solid fa-user"></i> Login          
               </Link>
             </li>
           </ul>

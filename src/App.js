@@ -1,13 +1,19 @@
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import { TextSlide } from './components/TextSlide/TextSlide';
-import { ImageCarousel} from './components/ImageCarousel/ImageCarousel'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Login } from './pages/Login';
+
+
 function App() {
+
   return (
     <div>
-      <Navbar></Navbar>
-      <TextSlide></TextSlide>
-      <ImageCarousel></ImageCarousel>
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home/>} ></Route>
+            <Route path='/login' element={<Login/>}></Route>
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
