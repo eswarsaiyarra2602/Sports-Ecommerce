@@ -19,6 +19,10 @@ function Navbar({openLoginModal}) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div className="search-container"> {/* Wrapper for search input and icon */}
+            <input type="text" placeholder="Search for products, brands and more"/>
+            < i className="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
           <ul className="navbar-nav">
             <li className="nav-item position-relative">
               <Link className='nav-link' to="/orders">
