@@ -46,9 +46,8 @@
     height: 60px;
     border-radius: 50px;  /* More subtle border-radius */
     background: linear-gradient(135deg, #f3f3f3, #ededed);  /* Gradient background */
-    color: #4a4a4a;  /* Darker text for better readability */
+    color: #333;  /* Darker text for better readability */
     font-size: 18px;
-    font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
     cursor: pointer;
     transition: all 0.3s ease;  /* Smooth transition on hover */

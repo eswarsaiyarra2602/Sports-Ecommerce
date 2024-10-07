@@ -1,5 +1,6 @@
 import React from 'react';
 import './Item.css';
+import { Link } from 'react-router-dom';
 
 export const Item = (props) => {
   let badgeClass = '';
@@ -13,9 +14,11 @@ export const Item = (props) => {
 
   return (
     <div className='item'>
-      <div className='item-image-container'>
-        <img src={props.image} alt={props.name} />
-      </div>
+      <Link to={`/product/${props.product_id}`}>
+        <div className='item-image-container'>
+          <img src={props.image} alt={props.name} />
+        </div>
+      </Link>
       <div className='item-details'>
         <p className='item-name'>{props.name}</p>
 

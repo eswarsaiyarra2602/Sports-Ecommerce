@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Footer } from './components/Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
+import {Product} from './pages/Product';
 import ShopCategory from './pages/ShopCategory'
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
             <Route path='/login' element={<Login/>}></Route>
             <Route path='/badminton-products' element={<ShopCategory category='badminton'/>}></Route>
             <Route path='/football-products' element={<ShopCategory category='football'/>}></Route>
+            <Route path='/product' element={<Product/>}>
+              <Route path=':product_id' element={<Product/>}/>
+            </Route>
           </Routes>
         <Footer/>
       </BrowserRouter>
